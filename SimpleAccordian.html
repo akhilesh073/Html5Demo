@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+	<title>Accordion</title>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$(".accordiondiv h1").click(function () {
+				$('.active').removeClass('active');
+				$(this).addClass('active');
+				$(this).siblings('.accordionbody').slideToggle();
+			});
+		});
+	</script>
+	<style>
+		.accordionbody {
+			display: none;
+			border: 1px solid;
+			padding: 8px;
+			width: 278px;
+			margin-left: 2px;
+		}
+		.accordiondiv h1 {
+			background-color: #39E;
+			color: #fff;
+			font-weight: normal;
+			padding: 10px;
+			font-size: 17px;
+			margin: 0;
+			border: 1px solid;
+			border-radius: 5px;
+		}
+		.accordiondiv {
+			width: 300px;
+			border-radius: 6px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="maindiv">
+		<div class="accordiondiv">
+			<h1>
+                accordion 1</h1>
+			<div class="accordionbody">
+				some text here
+			</div>
+			<div class="accordionbody">
+				some text here
+			</div>
+		</div>
+		<div class="accordiondiv">
+			<h1>
+                accordion 2</h1>
+			<div class="accordionbody">
+				some text here
+			</div>
+			<div class="accordionbody">
+				some text here
+			</div>
+		</div>
+		<div class="accordiondiv">
+			<h1>
+                accordion 3</h1>
+			<div class="accordionbody">
+				some text here
+			</div>
+			<div class="accordionbody">
+				some text here
+			</div>
+			<div class="accordionbody">
+				some text here
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

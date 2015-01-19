@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>PopupExapmle</title>
+
+	<style>
+		.popup-background {
+			float: left;
+			background-color: rgba(51, 51, 51, 0.50);
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			display: none;
+			z-index: 10000;
+		}
+		.popup-con {
+			margin: auto;
+			width: 600px;
+			position: relative;
+		}
+		.popup-body {
+			background-color: #fff;
+			padding: 10px;
+			position: absolute;
+			width: 100%;
+			top: 100px;
+			border-radius: 9px;
+		}
+		a.close-popup {
+			font-family: arial;
+			text-decoration: none;
+			background-color: #333;
+			color: #fff;
+			border-radius: 50%;
+			height: 21px;
+			position: absolute;
+			width: 20px;
+			text-align: center;
+			right: 5px;
+			top: 5px;
+		}
+		textarea {
+			margin: 0px;
+			width: 583px;
+			height: 122px;
+			border: 1px solid #333;
+			border-radius: 5px;
+			-webkit-box-shadow: 2px 3px 0px 0px rgba(94, 88, 94, .75);
+			-moz-box-shadow: 2px 3px 0px 0px rgba(94, 88, 94, .75);
+			box-shadow: 2px 3px 0px 0px rgba(94, 88, 94, .75);
+		}
+		input {
+			width: 200px;
+			height: 30px;
+			border: 1px solid #333;
+			border-radius: 5px;
+			-webkit-box-shadow: 2px 3px 0px 0px rgba(94, 88, 94, .75);
+			-moz-box-shadow: 2px 3px 0px 0px rgba(94, 88, 94, .75);
+			box-shadow: 2px 3px 0px 0px rgba(94, 88, 94, .75);
+		}
+		label {
+			font-size: 20px;
+			font-style: oblique;
+		}
+		h1 {
+			text-align: center;
+			border-bottom: 1px solid #333;
+			width: auto;
+		}
+		a.popup-link {
+			color: #fff;
+			background-color: #337ab7;
+			border-color: #2e6da4;
+			display: inline-block;
+			padding: 6px 12px;
+			margin-bottom: 0;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 1.42857143;
+			text-align: center;
+			white-space: nowrap;
+			vertical-align: middle;
+			cursor: pointer;
+			border: 1px solid transparent;
+			border-radius: 4px;
+			text-decoration: none;
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<h1>Pop ups</h1>
+	<a href="#" class="popup-link" rel="popup1">pop-up</a>
+	<a href="#" class="popup-link" rel="popup2">Feedback</a>
+
+	<!-- first popup with id=popup1-->
+	<div class="popup-background" id="popup1">
+
+		<div class="popup-con">
+			<div class="popup-body">
+
+				<a href="#" class="close-popup">x</a>
+				<h1>simple pop-up </h1>
+
+				<p>Simple popup that can be used as a form submittion</p>
+
+			</div>
+		</div>
+	</div>
+	<!--end of popup1-->
+
+
+	<!-- Second popup for feedback form id=popup2-->
+
+	<div class="popup-background" id="popup2">
+
+		<div class="popup-con">
+			<div class="popup-body">
+
+				<form action="#">
+					<a href="#" class="close-popup">x</a>
+					<h1>Feedback form</h1>
+					<div>
+						<label>Name:</label>
+						<input type="text" placeholder="  Your full name" />
+					</div>
+					<br>
+					<div>
+						<label>Email:</label>
+
+						<input type="email"></input>
+					</div>
+					<br>
+					<div>
+						<label>Feedback:</label>
+						<br>
+						<textarea placeholder="Remember, be nice!" cols="30" rows="5"></textarea>
+					</div>
+				</form>
+
+			</div>
+		</div>
+		<!-- end of popup2-->
+
+
+	</div>
+
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(".popup-link").click(function () {
+			var popupId = "#" + $(this).attr("rel");
+
+			$(popupId).fadeIn();
+
+
+		});
+		$(".close-popup").click(function () {
+
+			$(".popup-background").fadeOut();
+
+
+		});
+	</script>
+</body>
+
+</html>
