@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>HTML5TAGS</title>
+	<style type="text/css">
+		input {
+			border: 1px solid #333;
+			border-radius: 4px;
+			margin: 4px;
+			padding: 6px;
+			background-color: #C2C297;
+		}
+		input[type=submit] {
+			background-color: #0000BF;
+			color: #fff;
+			font-size: 15px;
+		}
+		label {}
+	</style>
+</head>
+
+<body>
+	<div>
+		<label for="name">Your name goes here:</label>
+		<input id="name" type="text" autofocus/>
+		<br />
+		<br />
+		<label for="mothername">Your dog's name goes here :</label>
+		<input id="mothername" type="text" />
+	</div>
+	<div>
+		<br>
+		<br>
+		<form>
+			<label for="movie">What is your favorite movie :</label>
+			<input name="movie" type="text" required />
+			<input type="submit" value="Submit" />
+		</form>
+	</div>
+	<br>
+	<br>
+	<div>
+		<label for="country_name">Country :</label>
+		<input id="country_name" name="country_name" type="text" list="country" />
+		<datalist id="country">
+			<option value="Afghanistan">
+				<option value="Albania">
+					<option value="Algeria">
+						<option value="Andorra">
+							<option value="Angola">
+		</datalist>
+	</div>
+</body>
+
+</html>
